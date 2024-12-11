@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B2S Embedding Tableau Example</title>
+    <script
+      type="module"
+      src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"
+    ></script>
+    <!--Link to Skeleton Style Sheet which makes it look nicer-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+      integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1>B2S Tableau Embed</h1>
+    <!-- creating buttons -->
+    <fieldset id="first row of buttons">
+      <legend>Filters</legend>
+      <input
+        type="button"
+        value="Oregon and Washington Only"
+        id="oregon_and_washington"
+      />
+      <input type="button" value="Clear Filter" id="clear_filter" />
+      <input type="button" value="Undo" id="undo" />
+    </fieldset>
+    <div class="content">
+      <!-- dashboard embed -->
+      <tableau-viz
+        id="tableauViz"
+        src="https://public.tableau.com/views/Superstore_embedded_800x800/Overview"
+        width="800vw"
+        height="800vh"
+        toolbar="top"
+      >
+      </tableau-viz>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
